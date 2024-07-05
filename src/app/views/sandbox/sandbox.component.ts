@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { NavComponent } from '../../components/nav/nav.component';
 import { ResultOverlayComponent } from '../../components/result-overlay/result-overlay.component';
-import { CommonModule } from '@angular/common'
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-sandbox',
@@ -19,6 +19,7 @@ export class SandboxComponent {
   cpuScore = 0;
   isGameOver = false;
   winner = '';
+  @ViewChild('choiceBox') choiceBox?: ElementRef<HTMLDivElement>;
 
   /*
   TODO
@@ -44,7 +45,12 @@ export class SandboxComponent {
       this.gameOver();
       return;
     }
+    setTimeout(() => {
+      this.choiceBox!.nativeElement.scrollLeft += 20000;
+    }, 5);
   }
+
+  scrollTest() {}
 
   gameOver() {
     if (this.userScore > this.cpuScore) {

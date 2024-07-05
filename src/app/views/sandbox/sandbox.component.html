@@ -17,7 +17,7 @@
       <p>User ({{ userScore }})</p>
       <p>CPU ({{ cpuScore }})</p>
     </div>
-    <div class="choice-box">
+    <div #choiceBox class="choice-box">
       <div class="row">
         @for (choice of userChoices; track choice) {
         <p class="choices">{{ choice }}</p>
@@ -32,6 +32,7 @@
   </div>
   <button (click)="guess('🟢')">Cooperate</button>
   <button (click)="guess('🔴')">Defect</button>
+  <button (click)="scrollTest()">Scroll</button>
   <hr />
   <div class="rules-box">
     <h3>Rules</h3>
