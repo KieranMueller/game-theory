@@ -23,10 +23,7 @@ export class SandboxComponent {
 
     /*
     TODO
-    - Reset game when over
     - Have better win/lose/draw screen, modal?
-    - Hook gameboy favicon up
-    - Mobile, ensure scrolling game stays focused to the right, to avoid scrolling with finger every turn
     - Custom round limit
     - Adjust difficulty/predictability
   
